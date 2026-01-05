@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:fitsSystemWindows="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!-- Toolbar -->
+<com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:layout_margin="0dp"
+    android:paddingStart="16dp"
+    android:paddingLeft="16dp"
+    app:title="设置"
+    app:titleTextColor="@android:color/white"
+    app:contentInsetStart="16dp"
+    app:contentInsetStartWithNavigation="16dp"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="16dp"
+    app:contentInsetRight="0dp" />
+        <!-- 内容区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="界面大小"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <SeekBar
+                android:id="@+id/uiScaleSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="15" />
+
+            <TextView
+                android:id="@+id/uiScaleValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="当前缩放: 1.0x"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="文字大小"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <SeekBar
+                android:id="@+id/textScaleSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="12" />
+
+            <TextView
+                android:id="@+id/textScaleValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="当前大小: 1.0x"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重置为默认"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
